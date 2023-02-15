@@ -15,7 +15,4 @@ export async function fetchProductsList(query) {
   return data.results;
 }
 
-console.log(fetchProductsList('computador'));
-fetchProductsList('computador');
-
 module.exports = { fetchProductsList };
