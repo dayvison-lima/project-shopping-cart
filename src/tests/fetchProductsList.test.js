@@ -4,8 +4,8 @@ import computadorSearch from './mocks/search';
 
 // implemente seus testes aqui
 describe('Teste a função fetchProductsList', () => {
-  it('fetchProductsList é uma função', () => {
-    
+  it('fetchProductsList é uma função', async () => {
+    console.log(fetchProductsList('computador'))
   });
 
   it('fetch é chamado ao executar fetchProductsList', () => {
