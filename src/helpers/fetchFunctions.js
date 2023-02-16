@@ -3,9 +3,7 @@ export const fetchProduct = () => {
 };
 
 export async function fetchProductsList(query) {
-  if (!query) {
-    throw new Error('Termo de busca não informado');
-  }
+  if (!query) throw new Error('Termo de busca não informado');
 
   const url = `https://api.mercadolibre.com/sites/MLB/search?q=${query}`;
 
@@ -15,4 +13,4 @@ export async function fetchProductsList(query) {
   return data.results;
 }
 
-module.exports = { fetchProductsList };
+// module.exports = { fetchProductsList };
