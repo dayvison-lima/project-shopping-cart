@@ -29,15 +29,6 @@ const productList = async () => {
   }
 };
 
-// const productList = async () => {
-//   const products = await fetchProductsList('computador');
-//   products.forEach((product) => {
-//     const productElement = createProductElement(product);
-//     productsSection.appendChild(productElement);
-//   });
-// };
-
-
 window.onload = async () => {
   productList();
 };
