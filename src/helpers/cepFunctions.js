@@ -15,19 +15,17 @@ export const searchCep = async () => {
   // seu código aqui
   const cep = document.querySelector('.cep-input').value;
   const cartAdress = document.querySelector('.cart__address');
+  const data = await getAddress();
+  const { status, address, district, city, state, type } = data;
   const tamanhoCep = 8;
+  const errorNum = 400;
+  const erroMessage = 'CEP não encontrado';
   if (cep.length !== tamanhoCep) {
-    const erroMessage = 'CEP não encontrado';
+    cartAdress.innerHTML = erroMessage;
+  } else if (!Object.keys(data).includes('address')) {
     cartAdress.innerHTML = erroMessage;
   } else {
-    const data = await getAddress();
-    const { status, address, district, city, state } = data;
-    // const errorNum = 404;
-    // if (status === errorNum) {
-    //   const erroMessage = 'CEP não encontrado';
-    //   cartAdress.innerHTML = erroMessage;
-    // }
-    // const cepAdress = `${address} - ${district} - ${city} - ${state}`;
     cartAdress.innerHTML = `${address} - ${district} - ${city} - ${state}`;
   }
+  // const cepAdress = `${address} - ${district} - ${city} - ${state}`;
 };
