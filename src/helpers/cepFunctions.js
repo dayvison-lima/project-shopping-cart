@@ -20,7 +20,6 @@ export const searchCep = async () => {
   const cartAdress = document.querySelector('.cart__address');
   const data = await getAddress();
   const { address, district, city, state, street, neighborhood } = data;
-  const cepAdress = `${address}, ${district}, ${city}, ${state}`;
+  const cepAdress = `${address} - ${district} - ${city} - ${state}`;
   cartAdress.innerHTML = cepAdress;
-  // cartAdress.innerHTML = `${street}, ${neighborhood}, ${city}, ${state}`;
 };
