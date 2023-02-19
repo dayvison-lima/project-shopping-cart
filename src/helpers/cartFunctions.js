@@ -17,6 +17,14 @@ export const saveCartID = (id) => {
   const cartProducts = getSavedCartIDs();
   const newCartProducts = [...cartProducts, id];
   localStorage.setItem('cartProducts', JSON.stringify(newCartProducts));
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const existingItem = cartItems.find((item) => item.id === id);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cartItems.push({ id, quantity: 1 });
+  }
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
 };
 
 /**

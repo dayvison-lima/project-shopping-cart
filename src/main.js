@@ -1,3 +1,4 @@
+import { saveCartID } from './helpers/cartFunctions';
 import { searchCep } from './helpers/cepFunctions';
 import { fetchProductsList } from './helpers/fetchFunctions';
 import { createCustomElement, createProductElement } from './helpers/shopFunctions';
