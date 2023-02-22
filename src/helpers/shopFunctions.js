@@ -41,14 +41,37 @@ export const getIdFromProduct = (product) => (
   product.querySelector('span.product__id').innerText
 );
 
+// const sumPrice = () => {
+//   const cartProducts = document.querySelectorAll('.cart__product');
+//   let totalPrice = 0;
+//   cartProducts.forEach((product) => {
+//     const price1 = product.querySelector('.product__price__value').innerText;
+//     totalPrice += Number(price1);
+//     return totalPrice;
+//   });
+//   const totalPriceElement = document.querySelector('.total-price');
+//   totalPriceElement.innerText = totalPrice;
+// };
+
+const updateTotalPrice = async (price) => {
+  const totalPriceElement = document.querySelector('.total-price');
+  const currentTotal = parseFloat(totalPriceElement.innerText.replace('R$', ''));
+  const newTotal = (currentTotal + price).toFixed(2);
+  totalPriceElement.innerText = `R$ ${newTotal}`;
+
+  localStorage.setItem('totalPrice', newTotal);
+};
+
 /**
  * Função que remove o produto do carrinho.
  * @param {Element} li - Elemento do produto a ser removido do carrinho.
  * @param {string} id - ID do produto a ser removido do carrinho.
  */
+
 const removeCartProduct = (li, id) => {
   li.remove();
   removeCartID(id);
+  updateTotalPrice(-parseFloat(li.querySelector('.product__price__value').innerText));
 };
 
 /**
@@ -134,6 +157,7 @@ export const createProductElement = ({ id, title, thumbnail, price }) => {
     const cartProductElement = createCartProductElement(product);
     const cartProductsList = document.querySelector('.cart__products');
     cartProductsList.appendChild(cartProductElement);
+    updateTotalPrice(price);
   });
   return section;
 };
