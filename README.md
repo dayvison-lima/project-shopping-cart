@@ -11,7 +11,7 @@ Um **carrinho de compras** totalmente dinâmico! 🛒
 
 1. Clone o repositório
 
-- `git clone git@github.com:tryber/sd-029-b-project-shopping-cart.git`.
+- `git clone git@github.com:dayvison-lima/project-shopping-cart.git`.
 - Entre na pasta do repositório que você acabou de clonar:
   - `cd sd-029-b-project-shopping-cart`
 
