@@ -13,7 +13,7 @@ Um **carrinho de compras** totalmente dinâmico! 🛒
 
 - `git clone git@github.com:dayvison-lima/project-shopping-cart.git`.
 - Entre na pasta do repositório que você acabou de clonar:
-  - `cd sd-029-b-project-shopping-cart`
+  - `cd project-shopping-cart`
 
 2. Instale as dependências e inicialize o projeto
 
