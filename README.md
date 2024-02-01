@@ -1,8 +1,8 @@
 # Boas-vindas ao repositório do projeto Carrinho de Compras
 <details>
-  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
+    <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
 
- Um **carrinho de compras** totalmente dinâmico! 🛒
+Um **carrinho de compras** totalmente dinâmico! 🛒
 ![Project Gif](/images/prototipo.gif)
 </details>
 
@@ -99,6 +99,9 @@ npm run cy
 Após executar o comando acima, será aberta uma janela de navegador e então basta clicar no nome do arquivo de teste que quiser executar (project.spec.js).
 
 ⚠️ **Atenção:** Para que o cypress funcione você precisa estar com a aplicação rodando localmente. Para isso, execute o comando `npm run dev` no terminal.
+
+</details>
+</details>
 
 <details>
 <summary><strong>⚙️ API do Mercado Livre</strong></summary><br />
@@ -378,6 +381,8 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
   </details>
 
   </details>
+
+
 # Requisitos Obrigatórios
 
 ## 1. (TDD) Desenvolva testes de no mínimo 50% de cobertura das funções e linhas do arquivo `fetchFunctions`
@@ -828,4 +833,5 @@ Cada vez que o carrinho de compras é modificado, será necessário calcular o v
   - Verifica se o endereço é exibido após o CEP ser digitado
   - Verifica se a mensagem `CEP não encontrado` é exibida caso o CEP não exista
 
+</details>
 </details>
